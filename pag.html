@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Marvel Quiz</title>
+</head>
+<body>
+    <header>
+        <div id="leftheader">
+            <a href="" class="cab">Pontuação</a>
+            <a href="" class="cab">Guia</a>
+        <div>
+    </header>
+    <main>
+        <section id="principal">
+            <img id="img1" src="/Marvel/imagens/nome2.png" alt="">
+            <br>
+            <button type="button" id="botao1">Jogar</button>
+        </section>
+        <section id="carregando" style="display: none;">
+            <img src="/Marvel/gifs/loading.gif" alt="carregando" width="500px" height="400px">
+            <p>Carregando em todas as linhas do tempo</p>
+        </section>
+        <section id="perfil" style="display: none;">
+            <div id="1step">
+                <div id="b1"><h2>Escolha seu nome:</h2></div>
+                <div id="b2"><input type="text" name="nickname" id="nickname" placeholder="Digite seu nome" required></div>
+            </div>
+            <div id="2step">
+                <div id="tit">
+                    <h3>Escolha uma foto de usuário:</h3>
+                </div>
+                <div id="pers">
+                    <button type="button" class="icones" id="i1"><img src="/Marvel/imagens/Loki.png" alt="" class="icone2" id="f1"></button>
+                    <button type="button" class="icones" id="i2"><img src="/Marvel/imagens/america.png" alt="" class="icone2" id="f2"></button>
+                    <button type="button" class="icones" id="i3"><img src="/Marvel/imagens/aranha.png" alt="" class="icone2" id="f3"></button>
+                    <button type="button" class="icones" id="i4"><img src="/Marvel/imagens/pantera.png" alt="" class="icone2" id="f4"></button>
+                    <br>
+                    <button type="button" class="icones" id="i5"><img src="/Marvel/imagens/Viuva.png" alt="" class="icone2" id="f5"></button>
+                    <button type="button" class="icones" id="i6"><img src="/Marvel/imagens/thor.png" alt="" class="icone2" id="f6"></button>
+                    <button type="button" class="icones" id="i7"><img src="/Marvel/imagens/wanda.png" alt="" class="icone2" id="f7"></button>
+                    <button type="button" class="icones" id="i8"><img src="/Marvel/imagens/thanos.png" alt="" class="icone2" id="f8"></button>
+                </div>
+                <div id="b3"><button type="button" id="next2">Próximo</button></div>
+            </div>
+        </section>
+        <section id="Guia2" style="display: none;">
+            <h5 id="tg">Escolha uma das joias</h5>
+            <div id="joias">
+                <button type="button" id="t" class="infinity" ><img src="/Marvel/imagens/Tempo.png" alt="" height="35px" width="35px"></button>
+                <button type="button" id="p" class="infinity"><img src="/Marvel/imagens/Poder.png" alt=""  height="35px" width="35px"></button>
+                <button type="button" id="e" class="infinity"><img src="" alt=""  height="35px" width="35px"></button>
+                <button type="button" id="a" class="infinity"><img src="" alt="" height="35px" width="35px"></button>
+                <button type="button" id="m" class="infinity"><img src="" alt=""  height="35px" width="35px"></button>
+                <button type="button" id="r" class="infinity"><img src="" alt="" height="35px" width="35px"></button>
+            </div>
+            <div id="infor1" class="pacote" style="display: none;">
+                <div id="text">
+                    <h3>Joia do Tempo</h3>
+                    <p>**************************************************<br>*****************************************************<br>****************************************************</p>
+
+                </div>
+                <div id="next">
+                    <img src="/Marvel/gifs/loading.gif" alt="">
+                    <button type="button" class="cm">Começar</button>
+                </div>
+            </div>
+            <div id="infor2" class="pacote" style="display: none;">
+                <div id="text">
+                    <h3>Joia do Poder</h3>
+                    <p>**************************************************<br>*****************************************************<br>****************************************************</p>
+
+                </div>
+                <div id="next">
+
+                </div>
+            </div>
+            <div id="infor3" class="pacote" style="display: none;">
+                <div id="text">
+                    <h3>Joia do Espaço</h3>
+                    <p>**************************************************<br>*****************************************************<br>****************************************************</p>
+
+                </div>
+                <div id="next">
+
+                </div>
+            </div>
+            <div id="infor4" class="pacote"style="display: none;">
+                <div id="text">
+                    <h3>Joia da Alma</h3>
+                    <p>**************************************************<br>*****************************************************<br>****************************************************</p>
+
+                </div>
+                <div id="next">
+
+                </div>
+            </div>
+            <div id="infor5" class="pacote" style="display: none;">
+                <div id="text">
+                    <h3>Joia da Mente</h3>
+                    <p>**************************************************<br>*****************************************************<br>****************************************************</p>
+
+                </div>
+                <div id="next">
+
+                </div>
+            </div>
+            <div id="infor6" class="pacote" style="display: none;">
+                <div id="text">
+                    <h3>Joia do Realidade</h3>
+                    <p>**************************************************<br>*****************************************************<br>****************************************************</p>
+
+                </div>
+                <div id="next">
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        
+    </footer>
+    <div id="oculto">
+    </div>
+</body>
+</html>

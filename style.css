@@ -1,0 +1,170 @@
+body{
+    background-image: url("/Marvel/imagens/Marvel1.jpg");
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 25vh 50vh 25vh;
+}
+header{
+   background: linear-gradient(to bottom, gray, transparent);
+   height: 100px;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+}
+#leftheader{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+.cab{
+    margin-top: 0;
+    text-decoration: 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.cab:hover{
+    border-bottom: 10px black;
+}
+main{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#principal{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+#img1{
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    margin: 10px;
+}
+#botao1{
+    font-size: 10vh;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    transition: 0.3s;
+}
+#botao1:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#perfil{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#nickname{
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    width: 200px;
+}
+#next2{
+    margin-top: 15px;
+    border-radius: 3px;
+    background-color: rgb(80, 231, 80);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+.icones{
+    padding: 0;
+    border-radius: 30px;
+    border: none;
+}
+.icone2{
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+}
+#Guia2{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline;
+}
+#tg{
+    height: 50px;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+#joias{
+    margin-top: 3px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px;
+    padding: 0;
+
+}
+.infinity{
+    box-shadow: 5px 5px 5px black;
+    transition: 1s;
+    border-bottom: 10px;
+}
+#t{
+  background-color: #26df84; 
+}
+#p{
+    background-color: #f00ec8;
+}
+#e{
+    background-color: #260cbc;
+}
+#a{
+    background-color: #E8AD0E;
+}
+#m{
+    background-color: #EBE21B;
+}
+#r{
+    background-color: #8a0015;
+}
+.infinity:hover{
+    transform: scale(1.05);
+}
+#carregando{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    padding-bottom: 40px;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+@keyframes A {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
