@@ -1,5 +1,5 @@
 body{
-    background-image: url("/Marvel/imagens/Marvel1.jpg");
+    background-image: url("imagens/Marvel1.jpg");
     padding: 0;
     margin: 0;
     display: grid;
@@ -87,11 +87,15 @@ main{
     padding: 0;
     border-radius: 30px;
     border: none;
+    transition: 0.2s;
+}
+.icones:hover{
+    transform: scale(1.1);
 }
 .icone2{
     border-radius: 30px;
     height: 50px;
-    width: 50px;
+    width: 55px;
 }
 #Guia2{
     padding: 15px;
@@ -122,6 +126,24 @@ main{
     transition: 1s;
     border-bottom: 10px;
 }
+#next{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#nextb{
+    padding-top: 5px;
+}
+.cm{
+    background-color: green;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.cm:hover{
+    transform: scale(1.14);
+}
 #t{
   background-color: #26df84; 
 }
@@ -143,20 +165,156 @@ main{
 .infinity:hover{
     transform: scale(1.05);
 }
-#carregando{
+
+.caixap{
     padding: 15px;
     border-radius: 15px;
     background-color: whitesmoke;
-    padding-bottom: 40px;
     box-shadow: 5px 5px 5px black;
     animation-name: A;
     animation-duration: 0.2s;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    text-align: center;
+}
+#contador{
+    background-color: #26df84;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
 }
 
+#mind{
+    background-color: #EBE21B;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 60px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+}
+.baix button{
+    border-radius: 5px;
+}
 
+#Notime{
+    position: absolute;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    color: #26df84;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+}
+.dicas{
+    position: absolute;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: #EBE21B;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+}
+#soul{
+    background-color:  #E8AD0E;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+}
+#app{
+    position: absolute;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #E8AD0E;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+}
+#power{
+    background-color:  #f00ec8;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+}
+#reality{
+    background-color:  #8a0015;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+}
+#space{
+    background-color:  #260cbc;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+}
+#final{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+}
 @keyframes A {
   from {
     margin-left: 300%;
@@ -167,4 +325,24 @@ main{
     margin-left: 0%;
     width: 100%;
   }
+}
+
+.poderjoia {
+    animation: poder 4s forwards;
+}
+
+@keyframes poder {
+    0% {
+        background-color: initial; 
+        opacity: 1; 
+    }
+    50% {
+        background-color: #8A2BE2;
+        opacity: 1;
+    }
+    100% {
+        background-color: #8A2BE2; 
+        opacity: 0; 
+        visibility: hidden; 
+    }
 }
