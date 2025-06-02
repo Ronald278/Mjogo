@@ -15,13 +15,9 @@
     </header>
     <main>
         <section id="principal">
-            <img id="img1" src="/Marvel/imagens/nome2.png" alt="">
+            <img id="img1" src="imagens/nome2.png" alt="">
             <br>
             <button type="button" id="botao1">Jogar</button>
-        </section>
-        <section id="carregando" style="display: none;">
-            <img src="/Marvel/gifs/loading.gif" alt="carregando" width="500px" height="400px">
-            <p>Carregando em todas as linhas do tempo</p>
         </section>
         <section id="perfil" style="display: none;">
             <div id="1step">
@@ -33,15 +29,15 @@
                     <h3>Escolha uma foto de usuário:</h3>
                 </div>
                 <div id="pers">
-                    <button type="button" class="icones" id="i1"><img src="/Marvel/imagens/Loki.png" alt="" class="icone2" id="f1"></button>
-                    <button type="button" class="icones" id="i2"><img src="/Marvel/imagens/america.png" alt="" class="icone2" id="f2"></button>
-                    <button type="button" class="icones" id="i3"><img src="/Marvel/imagens/aranha.png" alt="" class="icone2" id="f3"></button>
-                    <button type="button" class="icones" id="i4"><img src="/Marvel/imagens/pantera.png" alt="" class="icone2" id="f4"></button>
+                    <button type="button" class="icones" id="i1"><img src="imagens/Loki.png" alt="" class="icone2" id="f1"></button>
+                    <button type="button" class="icones" id="i2"><img src="imagens/america.png" alt="" class="icone2" id="f2"></button>
+                    <button type="button" class="icones" id="i3"><img src="imagens/aranha.png" alt="" class="icone2" id="f3"></button>
+                    <button type="button" class="icones" id="i4"><img src="imagens/pantera.png" alt="" class="icone2" id="f4"></button>
                     <br>
-                    <button type="button" class="icones" id="i5"><img src="/Marvel/imagens/Viuva.png" alt="" class="icone2" id="f5"></button>
-                    <button type="button" class="icones" id="i6"><img src="/Marvel/imagens/thor.png" alt="" class="icone2" id="f6"></button>
-                    <button type="button" class="icones" id="i7"><img src="/Marvel/imagens/wanda.png" alt="" class="icone2" id="f7"></button>
-                    <button type="button" class="icones" id="i8"><img src="/Marvel/imagens/thanos.png" alt="" class="icone2" id="f8"></button>
+                    <button type="button" class="icones" id="i5"><img src="imagens/Viuva.png" alt="" class="icone2" id="f5"></button>
+                    <button type="button" class="icones" id="i6"><img src="imagens/thor.png" alt="" class="icone2" id="f6"></button>
+                    <button type="button" class="icones" id="i7"><img src="imagens/wanda.png" alt="" class="icone2" id="f7"></button>
+                    <button type="button" class="icones" id="i8"><img src="imagens/thanos.png" alt="" class="icone2" id="f8"></button>
                 </div>
                 <div id="b3"><button type="button" id="next2">Próximo</button></div>
             </div>
@@ -49,8 +45,8 @@
         <section id="Guia2" style="display: none;">
             <h5 id="tg">Escolha uma das joias</h5>
             <div id="joias">
-                <button type="button" id="t" class="infinity" ><img src="/Marvel/imagens/Tempo.png" alt="" height="35px" width="35px"></button>
-                <button type="button" id="p" class="infinity"><img src="/Marvel/imagens/Poder.png" alt=""  height="35px" width="35px"></button>
+                <button type="button" id="t" class="infinity" ><img src="imagens/Tempo.png" alt="" height="35px" width="35px"></button>
+                <button type="button" id="p" class="infinity"><img src="imagens/Poder.png" alt=""  height="35px" width="35px"></button>
                 <button type="button" id="e" class="infinity"><img src="" alt=""  height="35px" width="35px"></button>
                 <button type="button" id="a" class="infinity"><img src="" alt="" height="35px" width="35px"></button>
                 <button type="button" id="m" class="infinity"><img src="" alt=""  height="35px" width="35px"></button>
@@ -63,8 +59,12 @@
 
                 </div>
                 <div id="next">
-                    <img src="/Marvel/gifs/loading.gif" alt="">
-                    <button type="button" class="cm">Começar</button>
+                    <div id="nexta">
+                        <img src="gifs/loading.gif" alt="">
+                    </div>
+                    <div id="nexb">
+                        <button type="button" class="cm" id="Tempo">Escolher essa</button>
+                    </div>
                 </div>
             </div>
             <div id="infor2" class="pacote" style="display: none;">
@@ -74,7 +74,7 @@
 
                 </div>
                 <div id="next">
-
+                     <button type="button" class="cm" id="Poder">Escolher essa</button>
                 </div>
             </div>
             <div id="infor3" class="pacote" style="display: none;">
@@ -84,7 +84,7 @@
 
                 </div>
                 <div id="next">
-
+                     <button type="button" class="cm" id="Espaço">Escolher essa</button>
                 </div>
             </div>
             <div id="infor4" class="pacote"style="display: none;">
@@ -94,7 +94,7 @@
 
                 </div>
                 <div id="next">
-
+                     <button type="button" class="cm" id="Alma">Escolher essa</button>
                 </div>
             </div>
             <div id="infor5" class="pacote" style="display: none;">
@@ -104,7 +104,7 @@
 
                 </div>
                 <div id="next">
-
+                     <button type="button" class="cm" id="Mente">Escolher essa</button>
                 </div>
             </div>
             <div id="infor6" class="pacote" style="display: none;">
@@ -114,17 +114,363 @@
 
                 </div>
                 <div id="next">
-
+                     <button type="button" class="cm" id="Realidade">Escolher essa</button>
                 </div>
             </div>
         </section>
+        <section id="perguntas" style="display: none;">
+            <div class="caixap" id="p1">
+                <div class="sup">
+                    <p class="pp">Qual desses atores foi o primeiro Homem-Aranha?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r1">A)Tom Holland</button>
+                    <button type="button" id="r2">B)Tobey Maguire</button>
+                    <button type="button" id="r3">C)Andrew Garfield</button>
+                    <button type="button" id="r4">D)Chris Evans</button>
+                </div>
+                <div class="bb"><button type="button" id="bt1">Responder</button></div>
+            </div>
+            <div class="caixap" id="p2"style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual foi a ordem em que Thanos conseguiu as jóias do infinito em Vingadores: Guerra Infinita?</p>
 
+                </div>
+                <div class="baix">
+                    <button type="button" id="r5">A)Realidade, Mente, Alma, Tempo, Poder e Espaço.</button>
+                    <button type="button" id="r6">B)Alma, Tempo, Poder, Mente, Realidade e Espaço.</button>
+                    <button type="button" id="r7">C)Tempo, Poder, Espaço, Alma, Mente e Realidade.</button>
+                    <button type="button" id="r8">D)Poder, Espaço, Realidade, Alma, Tempo e Mente.</button>
+                </div>
+                <div class="bb"><button type="button" id="bt2">Responder</button></div>
+            </div>
+            <div class="caixap" id="p3" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Quem foi o ator que dublou o personagem Groot em Guardiões da Galáxia?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r9">A)Vin Diesel</button>
+                    <button type="button" id="r10">B)Dwayne Johnson</button>
+                    <button type="button" id="r11">C)Michael Fassbender</button>
+                    <button type="button" id="r12">D)Denzel Washington</button>
+                </div>
+                <div class="bb"><button type="button" id="bt3">Responder</button></div>
+            </div>
+            <div class="caixap" id="p4" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Em que filme o Coronel James Rhodes conseguiu sua primeira armadura?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r13">A)Homem de Ferro</button>
+                    <button type="button" id="r14">B)Vingadores: Era de Ultron</button>
+                    <button type="button" id="r15">C)Homem de Ferro 2</button>
+                    <button type="button" id="r16">D)Capitão América: Guerra Civil</button>
+                </div>
+                <div class="bb"><button type="button" id="bt4">Responder</button></div>
+            </div>
+            <div class="caixap" id="p5" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual é o alterego do personagem Thunderbolt Ross em Capitão América: Admirável Mundo Novo?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r17">A)Hulk Vermelho</button>
+                    <button type="button" id="r18">B)Agente Americano</button>
+                    <button type="button" id="r19">C)Máquina de Combate</button>
+                    <button type="button" id="r20">D)Sentinela</button>
+                </div>
+                <div class="bb"><button type="button" id="bt5">Responder</button></div>
+            </div>
+            <div class="caixap" id="p6" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual é o outro nome do filme Thunderbolts?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r21">A)Agentes do Governo</button>
+                    <button type="button" id="r22">B)Sexteto Sinistro</button>
+                    <button type="button" id="r23">)Os Novos Vingadores</button>
+                    <button type="button" id="r24">D)Os Marvels</button>
+                </div>
+                <div class="bb"><button type="button" id="bt6">Responder</button></div>
+            </div>
+            <div class="caixap" id="p7" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Quem é esse personagem?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r25">A)Nebulosa</button>
+                    <button type="button" id="r26">B)Capitã Marvel</button>
+                    <button type="button" id="r26">C)Feiticeira Escarlate</button>
+                    <button type="button" id="r28">D)Hela</button>
+                </div>
+                <div class="bb"><button type="button" id="bt7">Responder</button></div>
+            </div>
+            <div class="caixap" id="p8" style="display: none;">
+                <div class="sup">
+                    <p class="pp">8)Qual é o ser mais forte na Marvel(HQs)?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r29">A)Tribunal Vivo</button>
+                    <button type="button" id="r30">B)Franklin Richards</button>
+                    <button type="button" id="r31">C)Galactus</button>
+                    <button type="button" id="r32">D)One Above All</button>
+                </div>
+                <div class="bb"><button type="button" id="bt8">Responder</button></div>
+            </div>
+            <div class="caixap" id="p9" style="display: none;">
+                <div class="sup">
+                    <p class="pp">9)Qual é o nome do próximo filme dos Vingadores?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r33">A)Vingadores: Armageddon</button>
+                    <button type="button" id="r34">B)Vingadores: Doomsday</button>
+                    <button type="button" id="r35">C)Vingadores: Dinastia Kang</button>
+                    <button type="button" id="r36">D)Vingadores: Guerra do Caos</button>
+                </div>
+                <div class="bb"><button type="button" id="bt9">Responder</button></div>
+            </div>
+            <div class="caixap" id="p10" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual é o objetivo da Wanda em Doutor Estranho No Multiverso da Loucura?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r37">A)Adquirir mais poder</button>
+                    <button type="button" id="r38">B)Ter seus filhos de volta</button>
+                    <button type="button" id="r39">C)Trazer o Visão de volta a vida</button>
+                    <button type="button" id="r40">D)Destruir um universo</button>
+                </div>
+                <div class="bb"><button type="button" id="bt10">Responder</button></div>
+            </div>
+            <div class="caixap" id="p11" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Quem além do Thor já empunhou o machado Storm Breaker?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r41">A)Capitão América</button>
+                    <button type="button" id="r42">B)Homem-Aranha</button>
+                    <button type="button" id="r43">C)Gavião Arqueiro</button>
+                    <button type="button" id="r44">D)Mercúrio</button>
+                </div>
+                <div class="bb"><button type="button" id="bt11">Responder</button></div>
+            </div>
+            <div class="caixap" id="p12" style="display: none;">
+                <div class="sup">
+                    <p class="pp">12)Qual é o objetivo do Peter em Homem-Aranha: Sem Volta pra Casa?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="r45">A)Salvar sua namorada</button>
+                    <button type="button" id="r46">B)Impedir a morte da tia</button>
+                    <button type="button" id="r47">C)Conseguir um emprego</button>
+                    <button type="button" id="r48">D)Reverter o feito do Mysterio</button>
+                </div>
+                <div class="bb"><button type="button" id="bt12">Responder</button></div>
+            </div>
+            
+        </section>
+        <section id="final" style="display: none;">
+            <p>Parabéns, você acabou o jogo</p>
+            
+        </section>
+        <div id="contador" style="display: none;">
+            <h3 id="cont"></h3>
+        </div>
+        <div id="Notime" style="display: none;">
+            <p>O tempo acabou!</p>
+        </div>
+        <div name="soul">
+            <button type="button" id="soul" style="display: none;" ><img src="" alt=""></button>
+            <p id="app" style="display: none;">Você acabou de trocar 1 ponto por 2 respostas, Digite X no prompt para obter a resposta correta</p>
+        </div>
+        <div name="poder">
+            <button type="button" id="power" style="display: none;" ><img src="" alt=""></button>
+        </div>
+        <div id="dicas1" class="dicas" style="display: none;">
+            <p>Começa com a letra T</p>
+        </div>
+        <div id="dicas2" class="dicas"style="display: none;">
+            <p>Do roxo ao amarelo</p>
+        </div>
+        <div id="dicas3" class="dicas" style="display: none;">
+            <p>Velozes e Furiosos</p>
+        </div>
+        <div id="dicas4" class="dicas" style="display: none;">
+            <p>Em uma referência literária, através do furacão você acha o homem sem coração, <br> mas, na nossa situação ele vem de 2010</p>
+        </div>
+        <div id="dicas5" class="dicas" style="display: none;">
+            <p>Ele é gigante e zangado, porém, esse não é verde</p>
+        </div>
+        <div id="dicas6" class="dicas" style="display: none;">
+            <p>Conte as alternativas, e lembre-se da história dos três porquinhos.</p>
+        </div>
+        <div id="dicas7" class="dicas" style="display: none;">
+            <p>Se traduzir do inglês vira Maravilha</p>
+        </div>
+        <div id="dicas8" class="dicas" style="display: none;">
+            <p>Aquele que está acima de todos</p>
+        </div>
+        <div id="dicas9" class="dicas" style="display: none;">
+            <p>O que soa como booom?</p>
+        </div>
+        <div id="dicas10" class="dicas" style="display: none;">
+            <p>Tal como a Chorona</p>
+        </div>
+        <div id="dicas11" class="dicas" style="display: none;">
+            <p>Ele é bem patriota</p>
+        </div>
+        <div id="dicas12" class="dicas" style="display: none;">
+            <p>Essa vai ficar como um mistério</p>
+        </div>
+        <button type="button" id="reality" style="display: none;" ><img src="" alt=""></button>
+        <a href="special/space.html" id="space" style="display: none;"><img src="" alt=""></a>
+        <div class="caixap" id="e1" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Quem é esse personagem?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l1">A) Deadpool</button>
+                    <button type="button" id="l2">B)Capitão américa</button>
+                    <button type="button" id="l3">C)Homem Formiga</button>
+                    <button type="button" id="l4">D)Thanos</button>
+                </div>
+                <div class="bb"><button type="button" id="bot1">Responder</button></div>
+            </div>
+            <div class="caixap" id="e2"style="display: none;">
+                <div class="sup">
+                    <p class="pp">A Capitã Marvel tem cabelos?</p>
+
+                </div>
+                <div class="baix">
+                    <button type="button" id="l5">A)Pretos.</button>
+                    <button type="button" id="l6">B)Castanhos.</button>
+                    <button type="button" id="l7">C)Brancos.</button>
+                    <button type="button" id="l8">D)Loiros.</button>
+                </div>
+                <div class="bb"><button type="button" id="bot2">Responder</button></div>
+            </div>
+            <div class="caixap" id="e3" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual é a joia que está na testa do Visão?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l9">A)Poder</button>
+                    <button type="button" id="l10">B)Mente</button>
+                    <button type="button" id="l11">C)Alma</button>
+                    <button type="button" id="l12">D)Espaço</button>
+                </div>
+                <div class="bb"><button type="button" id="bot3">Responder</button></div>
+            </div>
+            <div class="caixap" id="e4" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Como o Homem-Aranha conseguiu seus poderes?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l13">A)Foi amaldiçoado</button>
+                    <button type="button" id="l14">B)É um alienígena</button>
+                    <button type="button" id="l15">C)Ele recebeu poderes de uma entidade</button>
+                    <button type="button" id="l16">D)Foi picado por uma aranha modificada</button>
+                </div>
+                <div class="bb"><button type="button" id="bot4">Responder</button></div>
+            </div>
+            <div class="caixap" id="e5" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Quando Bruce Banner se transforma no Hulk?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l17">A)Quando ele está triste</button>
+                    <button type="button" id="l18">B)Quando ele está ansioso</button>
+                    <button type="button" id="l19">C)Quando ele está irritado</button>
+                    <button type="button" id="l20">D)Quando ele está feliz</button>
+                </div>
+                <div class="bb"><button type="button" id="bot5">Responder</button></div>
+            </div>
+            <div class="caixap" id="e6" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Quem é o vilão do primeiro filme dos Vingadores?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l21">A)Ultron</button>
+                    <button type="button" id="l22">B)Doutor Destino</button>
+                    <button type="button" id="l23">C)Loki</button>
+                    <button type="button" id="l24">D)Thanos</button>
+                </div>
+                <div class="bb"><button type="button" id="bot6">Responder</button></div>
+            </div>
+            <div class="caixap" id="e7" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual é o nome do alter-ego da Wanda Maximoff?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l25">A)Miss Marvel</button>
+                    <button type="button" id="l26">B)Vampira</button>
+                    <button type="button" id="l27">C)Mística</button>
+                    <button type="button" id="l28">D)Feiticeira Escarlate</button>
+                </div>
+                <div class="bb"><button type="button" id="bot7">Responder</button></div>
+            </div>
+            <div class="caixap" id="e8" style="display: none;">
+                <div class="sup">
+                    <p class="pp">O Thor é o deus do quê?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l29">A)Do trovão</button>
+                    <button type="button" id="l30">B)Dos martelos</button>
+                    <button type="button" id="l31">C)Da velocidade</button>
+                    <button type="button" id="l32">D)Da nobreza</button>
+                </div>
+                <div class="bb"><button type="button" id="bot8">Responder</button></div>
+            </div>
+            <div class="caixap" id="e9" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Quais as cores do homem de ferro?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l33">A)Azul e prata</button>
+                    <button type="button" id="l34">B)Preto e vermelho</button>
+                    <button type="button" id="l35">C)Amarelo e verde</button>
+                    <button type="button" id="l36">D)Vermelho e amarelo</button>
+                </div>
+                <div class="bb"><button type="button" id="bot9">Responder</button></div>
+            </div>
+            <div class="caixap" id="e10" style="display: none;">
+                <div class="sup">
+                    <p class="pp">A roupa do Capitão América é inspirada em quê?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l37">A)Na roupa dos mlitares</button>
+                    <button type="button" id="l38">B)Na bandeira dos Estados Unidos</button>
+                    <button type="button" id="l39">C)Não tem inspiração</button>
+                    <button type="button" id="l40">D)Na Coca-Cola</button>
+                </div>
+                <div class="bb"><button type="button" id="bot10">Responder</button></div>
+            </div>
+            
+            <div class="caixap" id="e11" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual é o nome da equipe composta por Homem de Ferro, Capitão América, Thor, Hulk....?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l41">A)Sexteto Fantástico</button>
+                    <button type="button" id="l42">B)Liga da Justiça</button>
+                    <button type="button" id="l43">C)Guardiões da Terra</button>
+                    <button type="button" id="l44">D)Vingadores</button>
+                </div>
+                <div class="bb"><button type="button" id="bot11">Responder</button></div>
+            </div>
+            <div class="caixap" id="e12" style="display: none;">
+                <div class="sup">
+                    <p class="pp">Qual é a cor do Hulk do Bruce Banner?</p>
+                </div>
+                <div class="baix">
+                    <button type="button" id="l45">A)Vermelho</button>
+                    <button type="button" id="l46">B)Verde</button>
+                    <button type="button" id="l47">C)Azul</button>
+                    <button type="button" id="l48">D)Roxo</button>
+                </div>
+                <div class="bb"><button type="button" id="bot12">Responder</button></div>
+            </div>
     </main>
-    <script src="script.js"></script>
     <footer>
         
     </footer>
-    <div id="oculto">
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
