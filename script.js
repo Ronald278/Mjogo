@@ -11,7 +11,7 @@ ler3 =["D","A","D","B","A","A","C","C","C","D","A","D"];
 let indice = 0;
 let f = "";
 let segundos = 0;
-let p;
+let p = 0;
 let cont = 1;
 let vb = 0;
 let res;
@@ -20,9 +20,9 @@ let cont2 = 1;
 let contlist = 0;
 let contl = 0;
 let pc = 0;
-let parada = 0;
 let pontuacao = 0;
 let f1 = 0;
+let pon = 0;
 function retirarcor(){
     for(let v = 1; v < 49; v++){
         const c = document.getElementById(`r${v}`);
@@ -87,7 +87,7 @@ function quest(pc,p,contl){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
             console.log(ld)
            }, 1000)
     }
@@ -109,22 +109,7 @@ function detectar(inc,cont){
         }
     }
 }
-function pontost(pontuacao,parada){
-    pontuacao++
-    if(contl == 12){
-        ld.splice(3,0,pontuacao);
-        console.log(ld)
-    }
-}
-function pontos(less){
-    pontuacao++
-    if(contl >= 12){
-        pontuacao = pontuacao + less;
-        ld.splice(3,0,pontuacao);
-        console.log(ld)
-    }
-    return pontuacao;
-}
+
 function decletras(x,contl){
     if(x == "A"){
         idq = (4*contl) + 1;
@@ -141,7 +126,7 @@ function decletras(x,contl){
     }
 }
 function tempo2(p){
-    if(segundos >= 10 || p == 12 && parada == 0){
+    if(segundos >= 10 && f1 == 0){
         const timer = document.getElementById("contador");
         timer.style.display="none";
         const placa1 = document.getElementById("Notime");
@@ -156,8 +141,7 @@ function tempo2(p){
         val2.style.removeProperty("display")
         contl = 0;
         pc = 0;
-        parada = 1;
-        f1 = 1;
+        f1++ ;
     }
 
 }
@@ -193,6 +177,42 @@ const b1 = document.querySelector("#i1");
         const f = "imagens/Loki.png";
         ld.splice(1,0,f);
     })
+const b2 = document.querySelector("#i2");
+    b1.addEventListener("click",function fv(){
+        const f = "imagens\america.png";
+        ld.splice(1,0,f);
+    })
+const b3 = document.querySelector("#i3");
+    b1.addEventListener("click",function fv(){
+        const f = "imagens\aranha.png";
+        ld.splice(1,0,f);
+    })
+const b4 = document.querySelector("#i4");
+    b1.addEventListener("click",function fv(){
+        const f = "imagens\pantera.png";
+        ld.splice(1,0,f);
+    })
+const b5 = document.querySelector("#i5");
+    b1.addEventListener("click",function fv(){
+        const f = "imagens\Viuva.png";
+        ld.splice(1,0,f);
+    })
+const b6 = document.querySelector("#i6");
+    b1.addEventListener("click",function fv(){
+        const f = "imagens\thor.png";
+        ld.splice(1,0,f);
+    })
+const b7 = document.querySelector("#i7");
+    b1.addEventListener("click",function fv(){
+        const f = "imagens\wanda.png";
+        ld.splice(1,0,f);
+    })
+const b8 = document.querySelector("#i8");
+    b1.addEventListener("click",function fv(){
+        const f = "imagens\thor.png";
+        ld.splice(1,0,f);
+    })
+
 const btn2 = document.querySelector("#next2");
 btn2.addEventListener("click", function perfil1(){
     const inp = document.getElementById("nickname");
@@ -283,9 +303,14 @@ perg.addEventListener("click", function Tp(){
     setInterval(Tempo, 1000);
     pert = document.getElementById("perguntas");
     pert.style.removeProperty("display");
+    if(f1==0){
     btime = document.querySelector("#bt1");
     btime.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -307,15 +332,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
         }
     })
     btime2 = document.querySelector("#bt2");
     btime2.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -337,15 +364,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime3 = document.querySelector("#bt3");
     btime3.addEventListener("click",function(){
-        receber();
+         p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -367,15 +396,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime4 = document.querySelector("#bt4");
     btime4.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -397,15 +428,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime5 = document.querySelector("#bt5");
     btime5.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -427,15 +460,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime6 = document.querySelector("#bt6");
     btime6.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -457,15 +492,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime7 = document.querySelector("#bt7");
     btime7.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -487,15 +524,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime8 = document.querySelector("#bt8");
     btime8.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -517,15 +556,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime9 = document.querySelector("#bt9");
     btime9.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -547,15 +588,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime10 = document.querySelector("#bt10");
     btime10.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -577,15 +620,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime11 = document.querySelector("#bt11");
     btime11.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -607,15 +652,17 @@ perg.addEventListener("click", function Tp(){
             cont2++
             const pass2 = document.getElementById(`p${cont2}`)
             pass2.style.removeProperty("display");
-            tempo2(p);
             contl = contl + 1
             pc++
-            p++
     }
     })
     btime12 = document.querySelector("#bt12");
     btime12.addEventListener("click",function(){
-        receber();
+        p++
+        tempo2(p);
+        if(f1==0){
+            receber();
+        }
         if(res == le1[pc]){
             decletras(res,contl)
             const ani = document.getElementById(`r${idq}`)
@@ -637,7 +684,6 @@ perg.addEventListener("click", function Tp(){
             cont2 = 0;
             const pass2 = document.getElementById("contador")
             pass2.style.display="none"
-            tempo2(p);
             contl = 0;
             pc = 0;
             f1 = 1;
@@ -645,6 +691,7 @@ perg.addEventListener("click", function Tp(){
             
     }
     })
+    }
     if(f1 == 1 ){
     btime10 = document.querySelector("#bt1");
     btime10.addEventListener("click",function(){
@@ -704,7 +751,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -766,7 +813,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -828,7 +875,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -890,7 +937,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -952,7 +999,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1014,7 +1061,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1076,7 +1123,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1138,7 +1185,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1200,7 +1247,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1262,7 +1309,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1324,7 +1371,7 @@ perg.addEventListener("click", function Tp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1384,7 +1431,7 @@ perg.addEventListener("click", function Tp(){
             const fv = document.getElementById("final");
             fv.style.removeProperty("display");
             contl = contl + 1
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1469,7 +1516,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1531,7 +1578,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1593,7 +1640,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1655,7 +1702,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1717,7 +1764,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1779,7 +1826,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1841,7 +1888,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1903,7 +1950,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -1965,7 +2012,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2027,7 +2074,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2089,7 +2136,7 @@ perg2.addEventListener("click", function Po(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2146,14 +2193,12 @@ perg2.addEventListener("click", function Po(){
             const pass1 = document.getElementById(`p${cont2}`)
             pass1.style.display="none";
             cont2++
-            const pass2 = document.getElementById(`p${cont2}`)
-            pass2.style.removeProperty("display");
             contl = contl + 1
             pc++
             p++
             const fv = document.getElementById("final");
             fv.style.removeProperty("display");
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2228,7 +2273,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2290,7 +2335,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2352,7 +2397,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2414,7 +2459,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2476,7 +2521,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2538,7 +2583,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2600,7 +2645,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2662,7 +2707,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2724,7 +2769,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2786,7 +2831,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2848,7 +2893,7 @@ perg3.addEventListener("click", function Esp(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2910,7 +2955,7 @@ perg3.addEventListener("click", function Esp(){
             p++
             const fv = document.getElementById("final");
             fv.style.removeProperty("display");
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -2935,7 +2980,7 @@ perg4.addEventListener("click", function Al(){
             s3 = document.getElementById("app");
             console.log(s3)
             s3.style.display="none";
-        }, 1500);
+        }, 2500);
     })
     const pert = document.getElementById("perguntas");
     pert.style.removeProperty("display");
@@ -2997,7 +3042,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3013,7 +3058,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -3075,7 +3120,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
         }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3091,7 +3136,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3153,7 +3198,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3169,7 +3214,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3231,7 +3276,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3247,7 +3292,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3309,7 +3354,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3325,7 +3370,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3387,7 +3432,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3403,7 +3448,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3465,7 +3510,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3481,7 +3526,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3543,7 +3588,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3559,7 +3604,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3621,7 +3666,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3637,7 +3682,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3699,7 +3744,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3715,7 +3760,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3777,7 +3822,7 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }else if(res == "X" && x > 0){
             decletras(lr[p],contl)
@@ -3793,7 +3838,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
-            pontos()
+            pon++
            }, 500)
         }
     }) 
@@ -3813,6 +3858,10 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
+            const z = document.getElementById("soul");
+            z.style.display="none";
+            const fv = document.getElementById("final");
+            fv.style.removeProperty("display");
            },500)
         }else if(res == le2[pc]){
             decletras(res,contl)
@@ -3827,6 +3876,10 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
+            const z = document.getElementById("soul");
+            z.style.display="none";
+            const fv = document.getElementById("final");
+            fv.style.removeProperty("display");
            },500)
         }else if(res == le3[pc]){
            decletras(res,contl)
@@ -3855,6 +3908,10 @@ perg4.addEventListener("click", function Al(){
             contl = contl + 1
             pc++
             p++
+            const fv = document.getElementById("final");
+            fv.style.removeProperty("display");
+            const z = document.getElementById("soul");
+            z.style.display="none";
             pontos(menosp)
            }, 500)
     }else if(res == "X" && x > 0){
@@ -3871,6 +3928,8 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             x = x - 1;
+            const z = document.getElementById("soul");
+            z.style.display="none";
             const fv = document.getElementById("final");
             fv.style.removeProperty("display");
             pontos(menosp)
@@ -3950,7 +4009,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4019,7 +4078,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4088,7 +4147,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4157,7 +4216,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4226,7 +4285,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4295,7 +4354,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4364,7 +4423,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4433,7 +4492,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4502,7 +4561,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4571,7 +4630,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4640,7 +4699,7 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4667,6 +4726,8 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
+            const fv = document.getElementById("final");
+            fv.style.removeProperty("display");
            },500)
         }else if(res == le2[pc]){
             decletras(res,contl)
@@ -4681,6 +4742,8 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
+            const fv = document.getElementById("final");
+            fv.style.removeProperty("display");
            },500)
         }else if(res == le3[pc]){
            decletras(res,contl)
@@ -4695,6 +4758,8 @@ perg5.addEventListener("click", function Mt(){
             contl = contl + 1
             pc++
             p++
+            const fv = document.getElementById("final");
+            fv.style.removeProperty("display");
            },500)
         }else if(res == lr[pc]){
             decletras(res,contl)
@@ -4709,7 +4774,7 @@ perg5.addEventListener("click", function Mt(){
             p++
             const fv = document.getElementById("final");
             fv.style.removeProperty("display");
-            pontos()
+            pon++
            }, 500)
     }
     },2500)
@@ -4791,7 +4856,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -4854,7 +4919,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -4917,7 +4982,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -4980,7 +5045,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5043,7 +5108,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5106,7 +5171,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5169,7 +5234,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5231,7 +5296,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5294,7 +5359,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5357,7 +5422,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5419,7 +5484,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     }) 
@@ -5481,69 +5546,9 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
-           }, 500)
-    }
-    })
-    btime10 = document.querySelector("#bot1");
-    btime10.addEventListener("click",function(){
-        receber();
-        if(res == ler1[pc]){
-            decletras(res,contl)
-            const ani = document.getElementById(`l${idq}`)
-            ani.style.backgroundColor="red";
-            setTimeout(()=>{
-            const pass1 = document.getElementById(`e${cont2}`)
-            pass1.style.display="none";
-            cont2++
-            const pass2 = document.getElementById(`p${cont2}`)
-            pass2.style.removeProperty("display");
-            contl = contl + 1
-            pc++
-            p++
-           },500)
-        }else if(res == ler2[pc]){
-            decletras(res,contl)
-            const ani = document.getElementById(`l${idq}`)
-            ani.style.backgroundColor="red";
-            setTimeout(()=>{
-            const pass1 = document.getElementById(`e${cont2}`)
-            pass1.style.display="none";
-            cont2++
-            const pass2 = document.getElementById(`p${cont2}`)
-            pass2.style.removeProperty("display");
-            contl = contl + 1
-            pc++
-            p++
-           },500)
-        }else if(res == ler3[pc]){
-           decletras(res,contl)
-           const ani = document.getElementById(`l${idq}`)
-           ani.style.backgroundColor="red";
-           setTimeout(()=>{
-            const pass1 = document.getElementById(`e${cont2}`)
-            pass1.style.display="none";
-            cont2++
-            const pass2 = document.getElementById(`p${cont2}`)
-            pass2.style.removeProperty("display");
-            contl = contl + 1
-            pc++
-            p++
-           },500)
-        }else if(res == lr2[pc]){
-            decletras(res,contl)
-            const ani = document.getElementById(`l${idq}`)
-            ani.style.backgroundColor="green";
-            setTimeout(()=>{
-            const pass1 = document.getElementById(`e${cont2}`)
-            pass1.style.display="none";
-            cont2++
-            contl = contl + 1
-            pc++
-            p++
+            pon++
             const fv = document.getElementById("final");
             fv.style.removeProperty("display");
-            pontos()
            }, 500)
     }
     })
@@ -5605,7 +5610,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -5667,7 +5672,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -5729,7 +5734,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -5791,7 +5796,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -5853,7 +5858,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -5915,7 +5920,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -5977,7 +5982,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -6039,7 +6044,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -6101,7 +6106,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -6163,7 +6168,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -6225,7 +6230,7 @@ perg6.addEventListener("click", function Real(){
             contl = contl + 1
             pc++
             p++
-            pontos()
+            pon++
            }, 500)
     }
     })
@@ -6279,20 +6284,23 @@ perg6.addEventListener("click", function Real(){
             const ani = document.getElementById(`l${idq}`)
             ani.style.backgroundColor="green";
             setTimeout(()=>{
-            const pass1 = document.getElementById(`e${cont2}`)
-            pass1.style.display="none";
-            cont2++
-            contl = contl + 1
-            pc++
-            p++
-            const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
-            pontos()
+                const pass1 = document.getElementById(`e${cont2}`)
+                pass1.style.display="none";
+                const fv = document.getElementById("final");
+                fv.style.removeProperty("display");
+                cont2++
+                contl = contl + 1
+                pc++
+                p++
+                pon++
            }, 500)
     }
     }) 
     }) 
-    
-
-    
+if(pon>10){
+    vc = document.getElementById("title").innerText="Parabéns, Você terminou o jogo e venceu!"
+}else{
+    vc = document.getElementById("title").innerText="Parabéns, Você terminou o jogo, porém, perdeu!"
+}
+vf = document.getElementById("textauto").innerText=`${ld[0]} você marcou ${pon}`
     
