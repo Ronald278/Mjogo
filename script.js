@@ -23,6 +23,7 @@ let pc = 0;
 let pontuacao = 0;
 let f1 = 0;
 let pon = 0;
+let solveproblem;
 function retirarcor(){
     for(let v = 1; v < 49; v++){
         const c = document.getElementById(`r${v}`);
@@ -1429,7 +1430,7 @@ perg.addEventListener("click", function Tp(){
             pass1.style.display="none";
             cont2++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
             contl = contl + 1
             pon++
            }, 500)
@@ -2197,7 +2198,7 @@ perg2.addEventListener("click", function Po(){
             pc++
             p++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
             pon++
            }, 500)
     }
@@ -2954,7 +2955,7 @@ perg3.addEventListener("click", function Esp(){
             pc++
             p++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
             pon++
            }, 500)
     }
@@ -3861,7 +3862,7 @@ perg4.addEventListener("click", function Al(){
             const z = document.getElementById("soul");
             z.style.display="none";
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
            },500)
         }else if(res == le2[pc]){
             decletras(res,contl)
@@ -3879,7 +3880,7 @@ perg4.addEventListener("click", function Al(){
             const z = document.getElementById("soul");
             z.style.display="none";
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
            },500)
         }else if(res == le3[pc]){
            decletras(res,contl)
@@ -3909,7 +3910,7 @@ perg4.addEventListener("click", function Al(){
             pc++
             p++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
             const z = document.getElementById("soul");
             z.style.display="none";
             pontos(menosp)
@@ -3931,7 +3932,7 @@ perg4.addEventListener("click", function Al(){
             const z = document.getElementById("soul");
             z.style.display="none";
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
             pontos(menosp)
            }, 500)
         }
@@ -4727,7 +4728,7 @@ perg5.addEventListener("click", function Mt(){
             pc++
             p++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
            },500)
         }else if(res == le2[pc]){
             decletras(res,contl)
@@ -4743,7 +4744,7 @@ perg5.addEventListener("click", function Mt(){
             pc++
             p++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
            },500)
         }else if(res == le3[pc]){
            decletras(res,contl)
@@ -4759,7 +4760,7 @@ perg5.addEventListener("click", function Mt(){
             pc++
             p++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
            },500)
         }else if(res == lr[pc]){
             decletras(res,contl)
@@ -4773,7 +4774,7 @@ perg5.addEventListener("click", function Mt(){
             pc++
             p++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
             pon++
            }, 500)
     }
@@ -5548,7 +5549,7 @@ perg6.addEventListener("click", function Real(){
             p++
             pon++
             const fv = document.getElementById("final");
-            fv.style.removeProperty("display");
+            solveproblem++;
            }, 500)
     }
     })
@@ -6287,7 +6288,7 @@ perg6.addEventListener("click", function Real(){
                 const pass1 = document.getElementById(`e${cont2}`)
                 pass1.style.display="none";
                 const fv = document.getElementById("final");
-                fv.style.removeProperty("display");
+                solveproblem++;
                 cont2++
                 contl = contl + 1
                 pc++
@@ -6297,10 +6298,12 @@ perg6.addEventListener("click", function Real(){
     }
     }) 
     }) 
-if(pon>10){
-    vc = document.getElementById("title").innerText="Parabéns, Você terminou o jogo e venceu!"
-}else{
-    vc = document.getElementById("title").innerText="Parabéns, Você terminou o jogo, porém, perdeu!"
+if(solveproblem>0){
+    if(pon>10){
+        vc = document.getElementById("title").innerText="Parabéns, Você terminou o jogo e venceu!"
+    }else{
+        vc = document.getElementById("title").innerText="Parabéns, Você terminou o jogo, porém, perdeu!"
+    }
+    vf = document.getElementById("textauto").innerText=`${ld[0]} você marcou ${pon}`
 }
-vf = document.getElementById("textauto").innerText=`${ld[0]} você marcou ${pon}`
     
