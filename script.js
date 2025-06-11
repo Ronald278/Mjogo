@@ -163,7 +163,7 @@ btn2.addEventListener("click", function perfil1(){
     if(n != ""){
         p = document.getElementById("perfil");
         p.style.display="none";
-        j = document.getElementById("p13");
+        j = document.getElementById("Guia2");
         j.style.removeProperty("display");
     }
 })
