@@ -1,3 +1,5 @@
+
+/*Plano de fundo*/
 body{
     background-image: url("imagens/Marvel1.jpg");
     padding: 0;
@@ -5,6 +7,9 @@ body{
     display: grid;
     grid-template-rows: 25vh 50vh 25vh;
 }
+
+/*Só decoração*/
+
 header{
    background: linear-gradient(to bottom, gray, transparent);
    height: 100px;
@@ -20,6 +25,9 @@ header{
     border-radius: 15px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
+
+/*Página inicial*/
+
 .cab{
     margin-top: 0;
     text-decoration: 0;
@@ -60,6 +68,9 @@ main{
     transform: scale(1.05);
     cursor: pointer;
 }
+
+/*Nome e criação de perfil*/
+
 #perfil{
     padding: 15px;
     border-radius: 15px;
@@ -83,20 +94,8 @@ main{
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
 }
-.icones{
-    padding: 0;
-    border-radius: 30px;
-    border: none;
-    transition: 0.2s;
-}
-.icones:hover{
-    transform: scale(1.1);
-}
-.icone2{
-    border-radius: 30px;
-    height: 50px;
-    width: 55px;
-}
+
+/*Caixas de escolha das joias*/
 #Guia2{
     padding: 15px;
     border-radius: 15px;
@@ -144,28 +143,73 @@ main{
 .cm:hover{
     transform: scale(1.14);
 }
+
+/*Caixa das joias*/
+
 #t{
-  background-color: #26df84; 
+  background-color: #056422; 
+  transition: box-shadow 0.3s ease-in-out;
 }
 #p{
-    background-color: #f00ec8;
+    background-color: #8A2BE2;
+    transition: box-shadow 0.3s ease-in-out;
 }
 #e{
     background-color: #260cbc;
+    transition: box-shadow 0.3s ease-in-out;
 }
 #a{
-    background-color: #E8AD0E;
+    background-color: #ffae00;
+    transition: box-shadow 0.3s ease-in-out;
 }
 #m{
     background-color: #EBE21B;
+    transition: box-shadow 0.3s ease-in-out;
 }
 #r{
     background-color: #8a0015;
+    transition: box-shadow 0.3s ease-in-out;
+
 }
+
+/* Brilho das Joias */
+
+#t:hover{
+    box-shadow: 0 0 100px  rgb(2, 126, 33);
+    filter: brightness(190%);
+}
+#p:hover{
+    box-shadow: 0 0 100px #8A2BE2;
+    filter: brightness(190%);
+
+}
+#e:hover{
+    box-shadow: 0 0 100px #090080;
+    filter: brightness(190%);
+
+}
+#a:hover{
+    box-shadow: 0 0 100px #c4930f;
+    filter: brightness(150%);
+
+}
+#m:hover{
+    box-shadow: 0 0 100px #ffee00;
+    filter: brightness(190%);
+
+}
+#r:hover{
+    box-shadow: 0 0 100px #801103;
+    filter: brightness(190%);
+
+}
+
+
+
 .infinity:hover{
     transform: scale(1.05);
 }
-
+/*Perguntas*/
 .caixap{
     padding: 15px;
     border-radius: 15px;
@@ -175,19 +219,46 @@ main{
     animation-duration: 0.2s;
     font-family: 'Times New Roman', Times, serif;
 }
-#contador{
-    background-color: #26df84;
-    border-radius: 19px;
-    padding: 10px;
-    font-size: 50px;
-    position: absolute;
-    bottom: 90px;
-    left: 50px;
-    color: white;
-    box-shadow: 5px 5px 5px black;
-    animation-name: A;
-    animation-duration: 0.2s;
+
+.sup{
+    display: flex;
+    justify-content: space-around;
 }
+
+.caixap .sup img{
+    height: 120px;
+    width: 150px;
+    border-radius: 5px;
+    margin: 7px;
+    box-shadow: 5px 5px 5px rgb(44, 44, 44);
+
+}
+
+.caixap .baix button{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(238, 232, 232);
+    padding: 10px;
+    box-shadow: 5px 5px 5px black;
+    margin-top: 10px;
+}
+
+.caixap .bb button{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(238, 232, 232);
+    padding: 10px;
+    box-shadow: 5px 5px 5px black;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.caixap .bb button:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+/*Botões de ativar joias*/
 
 #mind{
     background-color: #EBE21B;
@@ -201,12 +272,92 @@ main{
     box-shadow: 5px 5px 5px black;
     animation-name: A;
     animation-duration: 0.2s;
+    transition: 0.3s;
 }
-.baix button{
-    border-radius: 5px;
+#soul{
+    background-color:  #E8AD0E;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    transition: 0.3s;
 }
 
-#Notime{
+#power{
+    background-color:  #8A2BE2;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    transition: 0.3s;
+}
+#space{
+    background-color:  #260cbc;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    transition: 0.3s;
+}
+#reality{
+    background-color:  #8a0015;
+    border-radius: 19px;
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    animation-name: A;
+    animation-duration: 0.2s;
+    transition: 0.3s;
+}
+.imgj{
+    height: 50px;
+    width: 50px;
+}
+/*Brilho dos elememtos anteriores*/
+#mind:hover{
+    box-shadow: 0 0 100px  rgb(251, 255, 0);
+    filter: brightness(200%);
+}
+#soul:hover{
+    box-shadow: 0 0 100px  rgb(255, 217, 0);
+    filter: brightness(200%);
+}
+#power:hover{
+    box-shadow: 0 0 100px  rgb(162, 0, 255);
+    filter: brightness(200%);
+}
+#space:hover{
+    box-shadow: 0 0 100px  rgb(0, 47, 255);
+    filter: brightness(200%);
+}
+#reality:hover{
+    box-shadow: 0 0 100px  rgb(253, 0, 0);
+    filter: brightness(200%);
+}
+/*Elementos relacionados as joias*/
+#app{
     position: absolute;
     padding: 15px;
     border-radius: 15px;
@@ -215,8 +366,8 @@ main{
     animation-name: A;
     animation-duration: 0.2s;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 100px;
-    color: #26df84;
+    font-size: 20px;
+    color: #E8AD0E;
     left: auto;
     top: auto;
     bottom: auto;
@@ -238,8 +389,9 @@ main{
     bottom: auto;
     right: auto;
 }
-#soul{
-    background-color:  #E8AD0E;
+
+#contador{
+    background-color: #26df84;
     border-radius: 19px;
     padding: 10px;
     font-size: 50px;
@@ -251,7 +403,8 @@ main{
     animation-name: A;
     animation-duration: 0.2s;
 }
-#app{
+
+#Notime{
     position: absolute;
     padding: 15px;
     border-radius: 15px;
@@ -260,53 +413,15 @@ main{
     animation-name: A;
     animation-duration: 0.2s;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color: #E8AD0E;
+    font-size: 100px;
+    color: #26df84;
     left: auto;
     top: auto;
     bottom: auto;
     right: auto;
 }
-#power{
-    background-color:  #f00ec8;
-    border-radius: 19px;
-    padding: 10px;
-    font-size: 50px;
-    position: absolute;
-    bottom: 90px;
-    left: 50px;
-    color: white;
-    box-shadow: 5px 5px 5px black;
-    animation-name: A;
-    animation-duration: 0.2s;
-}
-#reality{
-    background-color:  #8a0015;
-    border-radius: 19px;
-    padding: 10px;
-    font-size: 50px;
-    position: absolute;
-    bottom: 90px;
-    left: 50px;
-    color: white;
-    box-shadow: 5px 5px 5px black;
-    animation-name: A;
-    animation-duration: 0.2s;
-}
-#space{
-    background-color:  #260cbc;
-    border-radius: 19px;
-    padding: 10px;
-    font-size: 50px;
-    position: absolute;
-    bottom: 90px;
-    left: 50px;
-    color: white;
-    box-shadow: 5px 5px 5px black;
-    animation-name: A;
-    animation-duration: 0.2s;
-}
-#final{
+/*Página Final*/
+#p13{
     padding: 15px;
     border-radius: 15px;
     background-color: whitesmoke;
@@ -315,6 +430,13 @@ main{
     animation-duration: 0.2s;
     font-family: 'Times New Roman', Times, serif;
 }
+
+/*Extras e animações*/
+
+.poderjoia {
+    animation: poder 4s forwards;
+}
+
 @keyframes A {
   from {
     margin-left: 300%;
@@ -327,10 +449,6 @@ main{
   }
 }
 
-.poderjoia {
-    animation: poder 4s forwards;
-}
-
 @keyframes poder {
     0% {
         background-color: initial; 
@@ -338,11 +456,15 @@ main{
     }
     50% {
         background-color: #8A2BE2;
+        box-shadow: 0 0 10x #8A2BE2;
+        filter: brightness(10%);
         opacity: 1;
     }
     100% {
-        background-color: #8A2BE2; 
+        background-color: #8A2BE2;
+        filter: brightness(20%);
         opacity: 0; 
         visibility: hidden; 
     }
 }
+
