@@ -296,7 +296,7 @@ s = document.querySelector("#soul")
         s2 = document.getElementById("app")
         s2.style.removeProperty("display")
         x = x + 2;
-        menosp = menosp - 1;
+        pontos = pontos - 1;
         setTimeout(()=>{
             s3 = document.getElementById("app");
             console.log(s3)
