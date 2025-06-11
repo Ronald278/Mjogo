@@ -61,7 +61,7 @@ function decletras(x,contl){
     }
 }
 function tempo2(){
-    if((segundos >= 20 && f1 == 0) || ((contl+1)==12 && f1 == 0)){
+    if((segundos >= 60 && f1 == 0) || ((contl+1)==12 && f1 == 0)){
         const timer = document.getElementById("contador");
         timer.style.display="none";
         const placa1 = document.getElementById("Notime");
